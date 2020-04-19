@@ -9,13 +9,19 @@ class App extends React.Component {
 
     increaseCounter = () => {
         this.setState({
-            counter: this.state.counter + 1
+            counter: this.state.counter + 10
         })
     }
 
     decreaseCounter = () => {
         this.setState({
             counter: this.state.counter - 1
+        })
+    }
+
+    resetCounter = () => {
+        this.setState({
+            counter: this.state.counter * 0
         })
     }
 
@@ -28,10 +34,12 @@ class App extends React.Component {
             <button onClick={this.increaseCounter}>
                 +
             </button>
+            <br></br>
+            <button onClick={this.resetCounter}>
+                Reset
+            </button>
         </div>
     }
-
-
 }
 
 ReactDom.render(
